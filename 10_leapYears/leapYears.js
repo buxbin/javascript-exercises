@@ -3,7 +3,7 @@ const leapYears = function (year) {
   const dividedByHundred = year % 100 === 0;
   const dividedByFourHundred = year % 400 === 0;
 
-  if ((dividedByFour && !dividedByHundred) || dividedByFourHundred) {
+  if (dividedByFour && (!dividedByHundred || dividedByFourHundred)) {
     return true;
   }
   return false;
