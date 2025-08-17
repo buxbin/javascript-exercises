@@ -11,11 +11,10 @@ const palindromes = function (word) {
   result = result.toLowerCase();
 
   for (let i = 0; i < result.length; i++) {
-    if (i === pointer || i > pointer) return true;
+    if (i >= pointer) return true;
 
     if (result[i] === result[pointer]) {
       pointer--;
-      continue;
     } else {
       return false;
     }
